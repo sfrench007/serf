@@ -1,3 +1,11 @@
+# This code snippet accompanies the manuscript "Physicochemical and structural parameters contributing to the 
+# antibacterial activity and efflux susceptibility of small molecule inhibitors of Escherichia coli", by 
+# El Zahed et al. (2020).  It uses example data found at github.com/sfrench007/serf, and builds a random forest 
+# model to predict molecules that are actively pumped in E. coli.  
+#
+# The code borrows from the elegant work by Richter et al. (2017; https://www.nature.com/articles/nature22308),
+# which is found at github.com/HergenrotherLab/GramNegAccum.  
+
 options(stringsAsFactors=FALSE)
 library(caret)
 library(doParallel)
@@ -10,7 +18,7 @@ library(GGally)
 cl <- makePSOCKcluster(7, outfile="") # ie. for 8 cores (4 physical, 4 virtual) ideal to use 7
 registerDoParallel(cl)
 
-# Ensure reproducibility for publication purposes
+# Reproducibility if required for publication purposes - this will save the seed to reproduce your data
 use_seed <- sample(1:100000,1)  # Generate a random seed between 1-100000
 set.seed(use_seed)
 
