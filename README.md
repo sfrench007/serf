@@ -7,4 +7,4 @@ El Zahed et al. (2020).  It uses example data found at github.com/sfrench007/ser
 model to predict molecules that are actively pumped in E. coli.  
 
 The code borrows from the elegant work by Richter et al. (2017; https://www.nature.com/articles/nature22308),
-which is found at github.com/HergenrotherLab/GramNegAccum.  
+which is found at https://github.com/HergenrotherLab/GramNegAccum.  
